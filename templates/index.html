@@ -1,15 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Mebel Centre</title>
-</head>
-<body>
-	<header>
-		<p>О сайте.</p>
-	</header>
-	<footer>
-	</footer>
-</body>
-</html>
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Каталог мебели.</h1>
+<p>Количественные данные:</p>
+<ul>
+	<li><strong>Категории:</strong>{{ num_category }}</li>
+	<li><strong>Мебель:</strong>{{ num_product }}</li>
+	<li><strong>Пользователи:</strong>{{ num_user }}</li>
+</ul>
+<!--
+<div class="btn-group" role="group">
+	<button 
+	type="submit" 
+	onclick="window.location.href='add-author';" class="btn btn-secondary">New author</button>
+	<button type="submit" class="btn btn-secondary"
+	onclick="window.location.href='add-book';">New book</button>
+	<button type="submit" class="btn btn-secondary"
+	onclick="window.location.href='#';">New genre</button>
+	<button type="submit" class="btn btn-secondary" 
+	onclick="window.location.href='#';">New book instance</button>
+</div> -->
+
+<!-- {% for author in authors %}
+	<h1>{{author.name}}</h1>
+{% endfor %}	 -->
+
+{% endblock %}
